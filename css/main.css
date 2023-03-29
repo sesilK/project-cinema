@@ -1,22 +1,32 @@
+* {
+    color: white;
+}
+.header-section {
+    background-image: url(../image/back-main.jpg);
+    background-size: cover;
+}
+
 section {
     width: 100%;
     /* height: 800px; */
-    display: flex;
+    display: block;
     justify-content: center;
     padding: 100px 10% 100px 10%;
     /* background-color: aquamarine; */
+    /* border: 1px solid white; */
 }
 
 article {
     width: 130px;
     height: 380px;
-    margin: 0px 25px;
+    margin: 0px 3%;
     background-image: url(../image/ticket.png);
     background-size: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    /* border: 1px solid white; */
 
 }
 
@@ -27,12 +37,12 @@ article img {
     /* background-color: black; */
 }
 
-article div {
+.reserveBNT {
     width: 100px;
     height: 25px;
     background-color: darkcyan;
     border: 0px;
-    border-radius: 8px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;

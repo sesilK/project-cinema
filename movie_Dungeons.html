@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEbox - Movie</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/movie.css">
+    <link rel="shortcut icon" type="image⁄x-icon" href="https://cdn-icons-png.flaticon.com/512/5407/5407562.png">
+    <script src="js/movie.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".unhidden").hide();
+            $(".seeMore").click(function () {
+                $(".unhidden").fadeIn(1000);
+                $(".seeMore").text("");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header-section">
+        <header>
+
+            <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
+                <ul class="menu" style="justify-content: start;">
+                    <li><a href="">VIP 라운지</a></li>
+                    <li><a href="">멤버십</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
+
+            <div class="logo" style="grid-column: 4/span 1; grid-row: 1/span 2;">
+                <a href="http://127.0.0.1:5500/project_cinema/main.html">
+                    <img src="image/LOGO.png" style="width: 150px; height: 70px; margin-top: 20px;">
+                    <!-- <span style="color: white;">CINE</span><span style="color: orangered;">box</span> -->
+                </a>
+            </div>
+
+            <div class="login" style="grid-column: 5/span 3; grid-row: 1/span 1;">
+                <ul class="menu" style="justify-content: end;">
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                    <li><a href="">빠른예매</a></li>
+                </ul>
+            </div>
+
+            <div class="login" style="grid-column: 1/span 3; grid-row: 2/span 1;">
+                <ul class="nav">
+                    <li><a href="">영화</a></li>
+                    <li><a href="">예매</a></li>
+                    <li><a href="">극장</a></li>
+                </ul>
+            </div>
+
+            <div class="login" style="grid-column: 5/span 3; grid-row: 2/span 1;">
+                <ul class="nav">
+                    <li><a href="">스토어</a></li>
+                    <li><a href="">혜택</a></li>
+                    <li><a href="">이벤트</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section>
+            <article>
+
+                <p class="titleP">던전 앤 드래곤: 도적들의 명예</p>
+                <p class="smallP"> 예매율 4위(11.8%) </p>
+                <p class="smallP">액션,어드벤처,판타지 | alrnr | 134분 | 2023.03.29 |</p>
+                <p class="largeP">한때는 명예로운 기사였지만, ‘어떤 사건’ 이후</p>
+                <p class="smallP">‘홀가’, ‘사이먼’, ‘포지’와 함께 도적질을 하게 된 ‘에드긴’.<br>
+                    ‘소피나’의 제안으로 ’부활의 서판’을 얻기 위해 ‘코린의 성’에 잠입하지만<br>
+                    ‘포지’와 ‘소피나’의 배신으로 실패하고 감옥에 갇힌다.</p>
+                <p class="smallP">
+                    <button class="seeMore">더보기 ▼</button><br>
+                <p class="unhidden">
+                    기발한 방법으로 탈옥에 성공한 ‘에드긴’과 ‘홀가’는<br>
+                    소중한 사람들과 다시 만나고, ‘부활의 서판’도 되찾기 위해<br>
+                    자신만의 팀을 꾸리기 시작하는데…<br>
+                    옛 동료인 소질 없는 소서러 '사이먼’과<br>
+                    새롭게 합류한 변신 천재 드루이드 '도릭’,<br>
+                    재미 빼고 다 가진 팔라딘 '젠크’까지<br>
+                    어딘가 2% 부족한 오합지졸로 가득한 이 팀,<br>
+                    과연 무사히 모험을 끝마칠 수 있을까?<br>
+                </p>
+                </p>
+
+            </article>
+
+            <article class="video">
+
+                <iframe src='https://tv.naver.com/embed/33998950?autoPlay=true' frameborder='no' scrolling='no'
+                    marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
+
+                <div class="button-box">
+                    <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
+                        <button class="button reserve">예매</button>
+                    </a>
+                    <a href="">
+                        <button class="button review">평점</button>
+                    </a>
+                </div>
+
+            </article>
+        </section>
+
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="inner-wrap">
+                    <ul class="fnb">
+                        <li><a href="" title="회사소개 페이지로 이동">회사소개</a></li>
+                        <li><a href="" title="인재채용 페이지로 이동">인재채용</a></li>
+                        <li><a href="" title="사회공헌 페이지로 이동">사회공헌</a></li>
+                        <li><a href="" title="제휴/광고/부대사업문의 페이지로 이동">제휴/광고/부대사업문의</a></li>
+                        <li><a href="" title="이용약관 페이지로 이동">이용약관</a></li>
+                        <li><a href="" title="위치기반서비스 이용약관 페이지로 이동">위치기반서비스 이용약관</a></li>
+                        <li class="privacy"><a href="" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a></li>
+                        <li><a href="" target="" title="윤리경영 페이지로 이동">윤리경영</a></li>
+                    </ul>
+
+                    <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i
+                            class="iconset ico-footer-search"></i> 극장찾기</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="inner-wrap">
+                    <div class="ci"></div>
+                    <div class="footer-info">
+                        <div>
+                            <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 씨네박스 스퀘어)</address>
+                            <p>ARS 1544-0000</p>
+                        </div>
+                        <p>대표자명 김영화</p>
+                        <p>· 개인정보보호책임자 김극장</p>
+                        <p>· 사업자등록번호 111-22-33333</p>
+                        <p>· 통신판매업신고번호 2023-서울성동-000</p>
+                        <p class="copy">COPYRIGHT © CINEboxJoongAng, Inc. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
