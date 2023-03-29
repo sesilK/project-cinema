@@ -1,0 +1,45 @@
+section {
+    width: 100%;
+    /* height: 800px; */
+    display: flex;
+    justify-content: center;
+    padding: 100px 10% 100px 10%;
+    /* background-color: aquamarine; */
+}
+
+article {
+    width: 130px;
+    height: 380px;
+    margin: 0px 25px;
+    background-image: url(../image/ticket.png);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+article img {
+    /* margin-bottom: 73px; */
+    width: 100%;
+    /* height: 290px;  */
+    /* background-color: black; */
+}
+
+article div {
+    width: 100px;
+    height: 25px;
+    background-color: darkcyan;
+    border: 0px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    font-family: 'Chosunilbo_myungjo';
+}
+
+article div:hover {
+    box-shadow: rgb(136, 187, 241) 0px 20px 30px -10px;
+}
