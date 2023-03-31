@@ -9,62 +9,341 @@
     <link rel="shortcut icon" type="image⁄x-icon" href="https://cdn-icons-png.flaticon.com/512/5407/5407562.png">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/seat.css">
+    <script src="js/seat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+
+</script>
 
 </head>
 
 <body>
+                <form action=""></form>
     <div class="header-section">
-    <header>
+        <header>
 
-        <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
-            <ul class="menu" style="justify-content: start;">
-                <li><a href="">VIP 라운지</a></li>
-                <li><a href="">멤버십</a></li>
-                <li><a href="">고객센터</a></li>
-            </ul>
-        </div>
+            <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
+                <ul class="menu" style="justify-content: start;">
+                    <li><a href="">VIP 라운지</a></li>
+                    <li><a href="">멤버십</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
 
-        <div class="logo" style="grid-column: 4/span 1; grid-row: 1/span 2;">
-            <a href="http://127.0.0.1:5500/project_cinema/main.html">
-                <img src="image/LOGO.png" style="width: 150px; height: 70px; margin-top: 20px;">
-            </a>
-        </div>
+            <div class="logo" style="grid-column: 4/span 1; grid-row: 1/span 2;">
+                <a href="http://127.0.0.1:5500/project_cinema/main.html">
+                    <img src="image/LOGO.png" style="width: 150px; height: 70px; margin-top: 20px;">
+                </a>
+            </div>
 
-        <div class="login" style="grid-column: 5/span 3; grid-row: 1/span 1;">
-            <ul class="menu" style="justify-content: end;">
-                <li><a href="">로그인</a></li>
-                <li><a href="">회원가입</a></li>
-                <li><a href="http://127.0.0.1:5500/project_cinema/reserve.html">빠른예매</a></li>
-            </ul>
-        </div>
+            <div class="login" style="grid-column: 5/span 3; grid-row: 1/span 1;">
+                <ul class="menu" style="justify-content: end;">
+                    <li><a href="http://127.0.0.1:5500/project_cinema/login.html">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                    <li><a href="http://127.0.0.1:5500/project_cinema/reserve.html">빠른예매</a></li>
+                </ul>
+            </div>
 
-        <div class="login" style="grid-column: 1/span 3; grid-row: 2/span 1;">
-            <ul class="nav">
-                <li><a href="">영화</a></li>
-                <li><a href="http://127.0.0.1:5500/project_cinema/reserve.html">예매</a></li>
-                <li><a href="">극장</a></li>
-            </ul>
-        </div>
+            <div class="login" style="grid-column: 1/span 3; grid-row: 2/span 1;">
+                <ul class="nav">
+                    <li><a href="">영화</a></li>
+                    <li><a href="http://127.0.0.1:5500/project_cinema/reserve.html">예매</a></li>
+                    <li><a href="">극장</a></li>
+                </ul>
+            </div>
 
-        <div class="login" style="grid-column: 5/span 3; grid-row: 2/span 1;">
-            <ul class="nav">
-                <li><a href="">스토어</a></li>
-                <li><a href="">혜택</a></li>
-                <li><a href="">이벤트</a></li>
-            </ul>
-        </div>
-    </header>
+            <div class="login" style="grid-column: 5/span 3; grid-row: 2/span 1;">
+                <ul class="nav">
+                    <li><a href="">스토어</a></li>
+                    <li><a href="">혜택</a></li>
+                    <li><a href="">이벤트</a></li>
+                </ul>
+            </div>
+        </header>
+        <section>
 
+            <div class="title">인원 선택</div>
+            <div class="outline">
+                <div class="count_BOX adult">
+                    성인
+                        <input type='button' onclick='count(this, "minus")' value='-' />
+                        <div class='result'>0</div>
+                        <input type='button' onclick='count(this, "plus")' value='+' />
+                </div>
+                <div class="count_BOX minor">
+                    청소년
+                    <input type='button' onclick='count(this, "minus")' value='-' />
+                    <div class='result'>0</div>
+                    <input type='button' onclick='count(this, "plus")' value='+' />
+                </div>
+                <div class="count_BOX treat">
+                    우대
+                    <input type='button' onclick='count(this, "minus")' value='-' />
+                    <div class='result'>0</div>
+                    <input type='button' onclick='count(this, "plus")' value='+' />
+                </div>
+            </div>
 
+            <div class="title">좌석 선택</div>
 
-    
-    <section>
-        
-    </section>
+            <div class="outline">
+                <div class="container">
+                    <div class="screen">SCREEN</div>
+                    <div class="row_alpha">
+                        <ul>
+                            <li>A</li>
+                            <li>B</li>
+                            <li>C</li>
+                            <li>D</li>
+                            <li>E</li>
+                            <li>F</li>
+                            <li>G</li>
+                            <li>H</li>
+                            <li>I</li>
+                            <li>J</li>
+                            <li>K</li>
+                        </ul>
+                    </div>
+                    <div class="seats">
+                        <div class="row">
+                            <div id="" class="unuse num"></div>
+                            <div id="" class="unuse num"></div>
+                            <div id="" class="unuse num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse num"></div>
+                            <div id="" class="unuse num"></div>
+                            <div id="" class="unuse num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="unuse num"></div>
+                            <div id="" class="unuse num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse num"></div>
+                            <div id="" class="unuse num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                        <div class="row">
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="unuse"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                            <div id="" class="seat num"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <div class="text">선택 좌석</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="selected">-</div>
+                    <div class="price">
+                        <div>결제금액 : </div>
+                        <div id="price">0</div>
+                        <div>원</div>
+                    </div>
+                    <input class="reset" type="reset" value="초기화" onClick="reset()"></input>
+                    <input class="pay" type="button" value="결제하기" onclick="pay()"></input>
+                </div>
+            </div>
+
+        </section>
     </div>
-
-
-
     <footer id="footer">
         <div class="footer-top">
             <div class="inner-wrap">
@@ -78,8 +357,9 @@
                     <li class="privacy"><a href="" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a></li>
                     <li><a href="" target="" title="윤리경영 페이지로 이동">윤리경영</a></li>
                 </ul>
-    
-                <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i class="iconset ico-footer-search"></i> 극장찾기</a>
+
+                <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i
+                        class="iconset ico-footer-search"></i> 극장찾기</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -87,7 +367,7 @@
                 <div class="ci"></div>
                 <div class="footer-info">
                     <div>
-                        <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가,  씨네박스 스퀘어)</address>
+                        <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 씨네박스 스퀘어)</address>
                         <p>ARS 1544-0000</p>
                     </div>
                     <p>대표자명 김영화</p>
@@ -99,6 +379,28 @@
             </div>
         </div>
     </footer>
+        </form>
+    <script>
+        let seatID = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
+
+        $(document).ready(function () {
+            for (let i = 0; i < $(".row").length; i++) {
+                for (let j = 0; j < 17; j++) {
+                    if (j < 5) {
+                        $(".row")[i].children[j].id = seatID[i] + (j + 1);
+                    } else if (j == 5) {
+                    } else if (j < 11) {
+                        $(".row")[i].children[j].id = seatID[i] + (j);
+                    } else if (j == 11) {
+                    } else {
+                        $(".row")[i].children[j].id = seatID[i] + (j - 1);
+                    }
+                };
+            };
+
+        });
+
+    </script>
 </body>
 
 </html>

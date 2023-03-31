@@ -8,40 +8,35 @@
     <title>CINEbox - Main</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+
     <link rel="shortcut icon" type="image⁄x-icon" href="https://cdn-icons-png.flaticon.com/512/5407/5407562.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $(document).ready(function () {
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/f8c5ee9553.js" crossorigin="anonymous"></script>
 
+    <script>
+
+        $(document).ready(function () {
             $("article").hide();
             $("article").fadeIn(5000);
-
+            $(".textBox").hide();
+            $(".textBox").fadeIn(7000);
         });
+        
     </script>
     <style>
-        section .articleBox {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-        }
-
-        .textBox {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            margin-top: -30px;
-            margin-bottom: 20px;
-            font-size: 13px;
-            font-family: 'Chosunilbo_myungjo';
-        }
+        /* .main_image_text:hover {
+            opacity: 0.9;
+        } */
     </style>
 </head>
 
 <body>
 
-    <div class="header-section">
+    <div id="gradient" class="header-section">
         <header>
 
             <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
@@ -60,7 +55,7 @@
 
             <div class="login" style="grid-column: 5/span 3; grid-row: 1/span 1;">
                 <ul class="menu" style="justify-content: end;">
-                    <li><a href="">로그인</a></li>
+                    <li><a href="http://127.0.0.1:5500/project_cinema/login.html">로그인</a></li>
                     <li><a href="">회원가입</a></li>
                     <li><a href="http://127.0.0.1:5500/project_cinema/reserve.html">빠른예매</a></li>
                 </ul>
@@ -85,37 +80,61 @@
         <section>
             <div class="textBox">박스오피스</div>
             <div class="articleBox">
-            <article>
-                <a href="http://127.0.0.1:5500/project_cinema/movie_Suzume.html">
-                    <img src="https://movie-phinf.pstatic.net/20230206_264/1675649061557DaJHD_JPEG/movie_image.jpg"></a>
-                <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
-                    <div class="reserveBNT">예매</div>
-                </a>
-            </article>
+                <article>
+                    <div class="main_image" onmouseout='changeOpacity2(this)' onmouseover='changeOpacity1(this)'>
+                        <a href="http://127.0.0.1:5500/project_cinema/movie_Suzume.html">
+                            <img
+                                src="https://movie-phinf.pstatic.net/20230206_264/1675649061557DaJHD_JPEG/movie_image.jpg">
+                            <h5 class="main_image_text" style="opacity: 0;">예고편 보기</h5>
+                        </a>
+                    </div>
+                    <button class="text" onclick="like(this)"><span class="heart"><i class="fa-regular fa-heart"></i> </span><span class="count">503</span></button>
+                    <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
+                        <div class="reserveBNT">예매</div>
+                    </a>
+                </article>
 
-            <article>
-                <a href="http://127.0.0.1:5500/project_cinema/movie_Interstellar.html">
-                    <img src="https://movie-phinf.pstatic.net/20160106_138/1452044846608eaFcJ_JPEG/movie_image.jpg"></a>
-                <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
-                    <div class="reserveBNT">예매</div>
-                </a>
-            </article>
+                <article>
+                    <div class="main_image" onmouseout='changeOpacity2(this)' onmouseover='changeOpacity1(this)''>
+                        <a href="http://127.0.0.1:5500/project_cinema/movie_Interstellar.html">
+                            <img
+                                src="https://movie-phinf.pstatic.net/20160106_138/1452044846608eaFcJ_JPEG/movie_image.jpg">
+                                <h5 class="main_image_text" style="opacity: 0;">예고편 보기</h5>
+                        </a>
+                    </div>
+                    <button class="text" onclick="like(this)"><span class="heart"><i class="fa-regular fa-heart"></i> </span><span class="count">183</span></button>
+                    <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
+                        <div class="reserveBNT">예매</div>
+                    </a>
+                </article>
 
-            <article>
-                <a href="http://127.0.0.1:5500/project_cinema/movie_SlamDunk.html">
-                    <img src="https://movie-phinf.pstatic.net/20221216_283/1671153488789d3g4j_JPEG/movie_image.jpg"></a>
-                <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
-                    <div class="reserveBNT">예매</div>
-                </a>
-            </article>
+                <article>
+                    <div class="main_image" onmouseout=' changeOpacity2(this)' onmouseover='changeOpacity1(this)'>
+                        <a href="http://127.0.0.1:5500/project_cinema/movie_SlamDunk.html">
+                            <img
+                                src="https://movie-phinf.pstatic.net/20221216_283/1671153488789d3g4j_JPEG/movie_image.jpg">
+                            <h5 class="main_image_text" style="opacity: 0;">예고편 보기</h5>
+                        </a>
+                    </div>
+                    <button class="text" onclick="like(this)"><span class="heart"><i class="fa-regular fa-heart"></i> </span><span class="count">199</span></button>
+                    <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
+                        <div class="reserveBNT">예매</div>
+                    </a>
+                </article>
 
-            <article>
-                <a href="http://127.0.0.1:5500/project_cinema/movie_Dungeons.html">
-                    <img src="https://movie-phinf.pstatic.net/20230308_127/1678255965773n4kJU_JPEG/movie_image.jpg"></a>
-                <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
-                    <div class="reserveBNT">예매</div>
-                </a>
-            </article>
+                <article>
+                    <div class="main_image" onmouseout='changeOpacity2(this)' onmouseover='changeOpacity1(this)'>
+                        <a href="http://127.0.0.1:5500/project_cinema/movie_Dungeons.html">
+                            <img
+                                src="https://movie-phinf.pstatic.net/20230308_127/1678255965773n4kJU_JPEG/movie_image.jpg">
+                            <h5 class="main_image_text" style="opacity: 0;">예고편 보기</h5>
+                        </a>
+                    </div>
+                    <button class="text" onclick="like(this)"><span class="heart"><i class="fa-regular fa-heart"></i> </span><span class="count">45</span></button>
+                    <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
+                        <div class="reserveBNT">예매</div>
+                    </a>
+                </article>
             </div>
         </section>
     </div>

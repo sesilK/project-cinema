@@ -1,6 +1,6 @@
 function textChange() {
-    document.querySelector(".selectSeat").textContent = " 좌석 배치 >>";
+    document.querySelector(".selectSeat").textContent = " 좌석 선택 >>";
 }
 function textChange2() {
-    document.querySelector(".selectSeat").textContent = "선택 완료";
+    document.querySelector(".selectSeat").textContent = "다음 >>";
 }

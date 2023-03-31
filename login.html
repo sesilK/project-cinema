@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEbox - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="shortcut icon" type="image⁄x-icon" href="https://cdn-icons-png.flaticon.com/512/5407/5407562.png">
+    <style>
+    </style>
+</head>
+
+<body id="particles-js">
+
+    <div class="jb-box">
+        <video muted autoplay loop>
+            <source src="media/video.mp4" width=100%, height="auto" type="video/mp4">
+            <strong>Your browser does not support the video tag.</strong>
+        </video>
+    </div>
+
+    <div class="jb-text">
+        <header>
+
+            <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
+                <ul class="menu" style="justify-content: start;">
+                    <li><a href="">VIP 라운지</a></li>
+                    <li><a href="">멤버십</a></li>
+                    <li><a href="">고객센터</a></li>
+                </ul>
+            </div>
+
+            <div class="logo" style="grid-column: 4/span 1; grid-row: 1/span 2;">
+                <a href="http://127.0.0.1:5500/project_cinema/main.html">
+                    <img src="image/LOGO.png" style="width: 150px; height: 70px; margin-top: 20px;">
+                </a>
+            </div>
+
+            <div class="login" style="grid-column: 5/span 3; grid-row: 1/span 1;">
+                <ul class="menu" style="justify-content: end;">
+                    <li><a href="http://127.0.0.1:5500/project_cinema/login.html">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                    <li><a href="http://127.0.0.1:5500/project_cinema/reserve.html">빠른예매</a></li>
+                </ul>
+            </div>
+
+            <div class="login" style="grid-column: 1/span 3; grid-row: 2/span 1;">
+                <ul class="nav">
+                    <li><a href="">영화</a></li>
+                    <li><a href="http://127.0.0.1:5500/project_cinema/reserve.html">예매</a></li>
+                    <li><a href="">극장</a></li>
+                </ul>
+            </div>
+
+            <div class="login" style="grid-column: 5/span 3; grid-row: 2/span 1;">
+                <ul class="nav">
+                    <li><a href="">스토어</a></li>
+                    <li><a href="">혜택</a></li>
+                    <li><a href="">이벤트</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="animated bounceInDown">
+            <div class="container">
+                <span class="error animated tada" id="msg"></span>
+                <form name="form1" class="box" onsubmit="return checkStuff()">
+                    <h4>회원 로그인<span></span></h4><br><br>
+                    <h5></h5>
+                    <input type="text" name="email" placeholder="아이디" autocomplete="off">
+                    <i class="typcn typcn-eye" id="eye"></i>
+                    <input type="password" name="password" placeholder="비밀번호" id="pwd" autocomplete="off">
+                    <label>
+                    </label>
+                    <a href="#" class="forgetpass">아이디/비밀번호 찾기</a>
+                    <input type="submit" value="로그인" class="btn1">
+                </form>
+                <a href="#" class="dnthave"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="inner-wrap">
+                <ul class="fnb">
+                    <li><a href="" title="회사소개 페이지로 이동">회사소개</a></li>
+                    <li><a href="" title="인재채용 페이지로 이동">인재채용</a></li>
+                    <li><a href="" title="사회공헌 페이지로 이동">사회공헌</a></li>
+                    <li><a href="" title="제휴/광고/부대사업문의 페이지로 이동">제휴/광고/부대사업문의</a></li>
+                    <li><a href="" title="이용약관 페이지로 이동">이용약관</a></li>
+                    <li><a href="" title="위치기반서비스 이용약관 페이지로 이동">위치기반서비스 이용약관</a></li>
+                    <li class="privacy"><a href="" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a></li>
+                    <li><a href="" target="" title="윤리경영 페이지로 이동">윤리경영</a></li>
+                </ul>
+
+                <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i
+                        class="iconset ico-footer-search"></i> 극장찾기</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="inner-wrap">
+                <div class="ci"></div>
+                <div class="footer-info">
+                    <div>
+                        <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 씨네박스 스퀘어)</address>
+                        <p>ARS 1544-0000</p>
+                    </div>
+                    <p>대표자명 김영화</p>
+                    <p>· 개인정보보호책임자 김극장</p>
+                    <p>· 사업자등록번호 111-22-33333</p>
+                    <p>· 통신판매업신고번호 2023-서울성동-000</p>
+                    <p class="copy">COPYRIGHT © CINEboxJoongAng, Inc. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

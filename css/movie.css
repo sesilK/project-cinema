@@ -1,10 +1,20 @@
 * {
     color: white;
+    
 }
 .header-section {
-    background-image: url(../image/back_v.jpg);
+    background-image: url(../image/back.jpg);
     background-size: cover;
+    font-family: 'Chosunilbo_myungjo';
 }
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 section {
     width: 100%;
@@ -13,8 +23,16 @@ section {
     justify-content: center;
     /* padding: 100px 10% 100px 10%; */
     /* background-color: aquamarine; */
-    display: flex;
     align-items: center;
+}
+
+section > div {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* width: 100%; */
+    /* background-size: cover; */
+    /* opacity: 0.3; */
 }
 
 article {
@@ -64,6 +82,7 @@ article button {
     /* margin-top: -15px; */
     font-size: small;
     margin-top: -30px;
+    line-height: 20px;
 }
 
 .hidden{
@@ -85,8 +104,8 @@ article button {
 .button {
     padding: 0;
     margin: 0;
-    width: 100px;
-    height: 25px;
+    width: 200px;
+    height: 40px;
     border: 0px;
     border-radius: 5px;
     font-size: small;
@@ -95,10 +114,11 @@ article button {
 
 button:hover {
     cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
 }
 
 .reserve {
-    background-color: darkcyan;
+    background-color: rebeccapurple;
 }
 
 .review {
