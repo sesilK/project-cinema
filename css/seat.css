@@ -93,7 +93,7 @@ section {
 .container2{
     margin-left: 3%;
     margin-top: 30px;
-    width: 30%;
+    width: 27%;
     /* border: 1px ridge white; */
     /* display: flex; */
 }
@@ -154,12 +154,17 @@ section {
     padding-top: 20px;
 }
 
+.BTN-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
 .pay, .reset{
     width: 150px;
     height: 40px;
-    position: relative;
+    /* position: relative;
     bottom: -10px;
-    left: 10%;
+    left: 10%; */
     /* margin-left: 0px; */
     border-radius: 10px;
     font-weight: bold;
@@ -173,6 +178,7 @@ section {
 .reset{
     background-color: gray;
     color: rgb(70, 70, 70);
+    margin-right: 5px;
 }
 
 .pay:hover{
