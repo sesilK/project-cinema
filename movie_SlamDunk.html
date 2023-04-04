@@ -12,24 +12,30 @@
     <script src="js/movie.js"></script>
     <script src="js/movie.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).on('click', '.deleteComment', function () {
+            $('#count').text(Number($('#count').text()) - 1);
+            $(this).parents('.eachComment').remove();
+        });
 
-$(document).ready(function () {
-    $(".unhidden").hide();
-    $(".seeMore").click(function () {
-        $(".unhidden").fadeIn(1000);
-        $(".seeMore").text("");
-    });
-});
-</script>
+        $(document).ready(function () {
+            $(".unhidden").hide();
+            $(".seeMore").click(function () {
+                $(".unhidden").fadeIn(1000);
+                $(".seeMore").text("");
+            });
+
+        });
+    </script>
     <style>
     </style>
 </head>
 
 <body>
-    <div class="header-section">
+    <div class="header-section" style="background-image: url(image/movie_slamdunk.jpg); background-size: cover;">
         <header>
 
             <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
@@ -71,44 +77,103 @@ $(document).ready(function () {
                 </ul>
             </div>
         </header>
-
-        <section>
-            <article>
+        <div id="topBtn" onclick="window.scrollTo(0,0)"">TOP</div>
+        <section class="section1">
+            <article class="text_box">
                 <div class="text">
-                <p class="titleP">더 퍼스트 슬램덩크</p>
-                <p class="smallP"> 예매율 3위(16.4%) </p>
-                <p class="smallP">애니메이션 | 일본 | 124분 | 2023.01.04 |</p>
-                <p class="largeP">전국 제패를 꿈꾸는 북산고 농구부 5인방의 꿈과 열정,<br> 멈추지 않는 도전을 그린 영화</p>
-                <!-- <p class="smallP">규슈의 한적한 마을에 살고 있는 소녀 ‘스즈메’는
-                    문을 찾아 여행 중인 청년 ‘소타’를 만난다.</p>
-                <p class="smallP">
-                    <button class="seeMore">더보기 ▼</button><br>
-                <div class="unhidden">
-                    그의 뒤를 쫓아 산속 폐허에서 발견한 낡은 문. ‘스즈메’가 무언가에 이끌리듯 문을 열자 마을에 재난의 위기가 닥쳐오고 가문 대대로 문 너머의 재난을
-                    봉인하는 ‘소타’를 도와 간신히 문을 닫는다. “닫아야만 하잖아요, 여기를!” 재난을 막았다는 안도감도 잠시, 수수께끼의 고양이 ‘다이진’이 나타나 ‘소타’를 의자로 바꿔 버리고
-                    일본 각지의 폐허에 재난을 부르는 문이 열리기 시작하자 ‘스즈메’는 의자가 된 ‘소타’와 함께 재난을 막기 위한 여정에 나선다. “꿈이 아니었어” 규슈, 시코쿠, 고베, 도쿄
-                    재난을 막기 위해 일본 전역을 돌며 필사적으로 문을 닫아가던 중 어릴 적 고향에 닿은 ‘스즈메’는 잊고 있던 진실과 마주하게 되는데…</div>
-                </p> -->
-</div>
+                    <p class="titleP">더 퍼스트 슬램덩크</p>
+                    <p class="smallP"> 예매율 3위(16.4%) </p>
+                    <p class="smallP">애니메이션 | 일본 | 124분 | 2023.01.04 |</p>
+                    <p class="largeP">전국 제패를 꿈꾸는 북산고 농구부 5인방의 꿈과 열정,<br> 멈추지 않는 도전을 그린 영화</p>
+
+                </div>
             </article>
 
             <article class="video">
 
-                <iframe src='https://tv.naver.com/embed/31720798?autoPlay=true' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
+                <iframe src='https://tv.naver.com/embed/31720798?autoPlay=true' frameborder='no' scrolling='no'
+                    marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
 
                 <div class="button-box">
                     <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
                         <button class="button reserve">예매</button>
                     </a>
-                    <a href="">
+                    <a href="#review">
                         <button class="button review">관람평</button>
                     </a>
                 </div>
-
             </article>
         </section>
 
-        <footer id="footer">
+        <a name="SteelCut"></a><br>
+        <div class="SteelCut">스틸컷 (<span></span>)</div>
+
+        <div class='bigPictureWrapper'>
+            <div class='bigPicture'>
+            </div>
+        </div>
+        <section class="section2">
+            <a href="#SteelCut">
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/04/02/XzaJQVMME9uYLyqeXsmasMOIHOV5ccOB_420.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/SO19AE01SNCSiUjF0f6b9oX4KCnwpkWJ_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/fbgoDoOjsFHf9WMm1j6NYy9kh7fm7yYy_380.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/01/11/9ZUtluahxvIhKRMFfWF9TTR4gW4fXg8C_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/pxQBaxtGwqXDN1xXQMQmMQEotMhHb4lZ_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/iFw18pQDvdY0Zgtm33P43LBQ9M93nXGP_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/mlahrDeAKwcmGjZiym4v9S3ILpJ1dCJ0_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/yNdB0athQbL2J1bw2xJwY17vft01Mokj_380.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/SRR8e0b67CljiVfAQHy7OoTFyytQ7rOK_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/yHiM7nb26JHLr8NlQBG0YNvGWI128OM7_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/uTtt5GeqLMPgvdQocHVlPTqwPm01aa7U_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/1KbKPrL6sWAk41js6O69WcdKXwaTeobK_380.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/y357oC46qy6TsuzCRPUhH92ZV7S0Ssv6_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/DfVq7j8atLv6dlHoh0z5cvBkILV0KP7f_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/vqza9oVMOPycZi7vudQJpeA0apGUa9I0_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2022/12/19/QGbKg117524w7kzXJOFjV1CtsbiK8gXx_380.jpg" alt="">
+                </div>
+            </a>
+        </section>
+
+        <section class="section3">
+            <a name="review"></a>
+
+            <div id="comment-count">관람평 (<span id="count">4</span>)</div>
+            <div id="form-commentInfo">
+                <input id="comment-input" placeholder="내용을 입력해 주세요.">
+                <button id="submit" onclick="pressBtn()">등록</button>
+            </div>
+            <div id="comments">
+                <div class="eachComment">
+                    <div class="name">nhyo****</div>
+                    <span class="inputValue">너희들은 안늙었구나..</span>
+                    <div class="time">2023-3-3 15:57:54</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">jvor****</div>
+                    <span class="inputValue"> 원래 극장판 만화영화는 원작으로 자막을 선호하지만 슬덩만큼은 꼭 더빙으로 보시길 강추합니다 완전 최고입니다 쿠키씬도 꼭 보시고 더 세컨드 슬램덩크도 나오길 바래봅니다 </span>
+                    <div class="time">2023-3-3 15:57:52</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">jemj****</div>
+                    <span class="inputValue"> 이노우에 다케히코가 청춘 시절을 슬램덩크와 함께 보냈던 이들에게 보내는 최고의 선물.</span>
+                    <div class="time">2023-3-3 15:57:48</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">eprf****</div>
+                    <span class="inputValue"> 아는 내용으로 이런 감동을 주다니</span>
+                    <div class="time">2023-3-3 15:56:40</div>
+                </div>
+            </div>
+        </section>
+    </div>
+            <footer id="footer">
             <div class="footer-top">
                 <div class="inner-wrap">
                     <ul class="fnb">
@@ -121,8 +186,9 @@ $(document).ready(function () {
                         <li class="privacy"><a href="" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a></li>
                         <li><a href="" target="" title="윤리경영 페이지로 이동">윤리경영</a></li>
                     </ul>
-        
-                    <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i class="iconset ico-footer-search"></i> 극장찾기</a>
+
+                    <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i
+                            class="iconset ico-footer-search"></i> 극장찾기</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -130,7 +196,7 @@ $(document).ready(function () {
                     <div class="ci"></div>
                     <div class="footer-info">
                         <div>
-                            <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가,  씨네박스 스퀘어)</address>
+                            <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 씨네박스 스퀘어)</address>
                             <p>ARS 1544-0000</p>
                         </div>
                         <p>대표자명 김영화</p>
@@ -142,8 +208,27 @@ $(document).ready(function () {
                 </div>
             </div>
         </footer>
-
-    </div>
+        <script>
+            $(document).ready(function (e) {
+    
+                $(document).on("click", "img", function () {
+                    var path = $(this).attr('src')
+                    showImage(path);
+    
+                });//end click event
+    
+                function showImage(fileCallPath) {
+                    $(".bigPictureWrapper").css("display", "flex").show();
+                    $(".bigPicture").html("<img src='" + fileCallPath + "' >")
+                }//end fileCallPath
+    
+                $(".bigPictureWrapper").on("click", function (e) {
+                    setTimeout(function () {
+                        $('.bigPictureWrapper').hide();
+                    }, 200);
+                });//end bigWrapperClick event
+            });
+        </script>
 </body>
 
 </html>

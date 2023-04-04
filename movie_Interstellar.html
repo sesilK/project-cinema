@@ -11,24 +11,28 @@
     <link rel="shortcut icon" type="image⁄x-icon" href="https://cdn-icons-png.flaticon.com/512/5407/5407562.png">
     <script src="js/movie.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-
-    $(document).ready(function () {
-        $(".unhidden").hide();
-        $(".seeMore").click(function () {
-            $(".unhidden").fadeIn(1000);
-            $(".seeMore").text("");
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).on('click', '.deleteComment', function () {
+            $('#count').text(Number($('#count').text()) - 1);
+            $(this).parents('.eachComment').remove();
         });
-    });
-</script>
+        $(document).ready(function () {
+            $(".unhidden").hide();
+            $(".seeMore").click(function () {
+                $(".unhidden").fadeIn(1000);
+                $(".seeMore").text("");
+            });
+        });
+    </script>
     <style>
     </style>
 </head>
 
 <body>
-    <div class="header-section">
+    <div class="header-section" style="background-image: url(image/movie_interstellar.jpg); background-size: cover;">
         <header>
 
             <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
@@ -70,44 +74,122 @@
                 </ul>
             </div>
         </header>
-
-        <section>
-            <article>
+        <div id="topBtn" onclick="window.scrollTo(0,0)"">TOP</div>
+        <section class="section1">
+            <article class="text_box">
                 <div class="text">
-                <p class="titleP">인터스텔라</p>
-                <p class="smallP"> 예매율 2위(20.8%) </p>
-                <p class="smallP">SF | 미국 | 169분 | 2014.11.06 |</p>
-                <p class="largeP">“우린 답을 찾을 거야, 늘 그랬듯이”</p>
-                <p class="smallP">세계 각국의 정부와 경제가 완전히 붕괴된 미래가 다가온다.
-                <p class="smallP">
-                    <button class="seeMore">더보기 ▼</button><br>
-                <div class="unhidden">
-                    지난 20세기에 범한 잘못이 전 세계적인 식량 부족을 불러왔고, <br>NASA도 해체되었다.<br>
-                    이때 시공간에 불가사의한 틈이 열리고, <br>남은 자들에게는 이 곳을 탐험해 인류를 구해야 하는 임무가 지워진다.<br>
-                    사랑하는 가족들을 뒤로 한 채 인류라는 더 큰 가족을 위해, <br>그들은 이제 희망을 찾아 우주로 간다.<br>
-                    그리고 우린 답을 찾을 것이다. 늘 그랬듯이…<br>
+                    <p class="titleP">인터스텔라</p>
+                    <p class="smallP"> 예매율 2위(20.8%) </p>
+                    <p class="smallP">SF | 미국 | 169분 | 2014.11.06 |</p>
+                    <p class="largeP">“우린 답을 찾을 거야, 늘 그랬듯이”</p>
+                    <p class="smallP">세계 각국의 정부와 경제가 완전히 붕괴된 미래가 다가온다.
+                    <p class="smallP">
+                        <button class="seeMore">더보기 ▼</button><br>
+                    <div class="unhidden">
+                        지난 20세기에 범한 잘못이 전 세계적인 식량 부족을 불러왔고, <br>NASA도 해체되었다.<br>
+                        이때 시공간에 불가사의한 틈이 열리고, <br>남은 자들에게는 이 곳을 탐험해 인류를 구해야 하는 임무가 지워진다.<br>
+                        사랑하는 가족들을 뒤로 한 채 인류라는 더 큰 가족을 위해, <br>그들은 이제 희망을 찾아 우주로 간다.<br>
+                        그리고 우린 답을 찾을 것이다. 늘 그랬듯이…<br>
+                    </div>
+                    </p>
                 </div>
-                </p>
-</div>
             </article>
 
             <article class="video">
 
-                <iframe src='https://tv.naver.com/embed/686999?autoPlay=true' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
+                <iframe src='https://tv.naver.com/embed/686999?autoPlay=true' frameborder='no' scrolling='no'
+                    marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
 
                 <div class="button-box">
                     <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
                         <button class="button reserve">예매</button>
                     </a>
-                    <a href="">
+                    <a href="#review">
                         <button class="button review">관람평</button>
                     </a>
                 </div>
-
             </article>
         </section>
 
-        <footer id="footer">
+        <a name="SteelCut"></a><br>
+        <div class="SteelCut">스틸컷 (<span></span>)</div>
+
+        <div class='bigPictureWrapper'>
+            <div class='bigPicture'>
+            </div>
+        </div>
+        <section class="section2">
+            <a href="#SteelCut">
+                <div>
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/0826/IE001747294_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1108/IE001771384_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1108/IE001771385_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1110/IE001772185_STD.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1103/IE001769824_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1111/IE001772273_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1111/IE001772274_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1111/IE001772275_STD.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1106/IE001771139_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1113/IE001773195_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1123/IE001775803_STD.jpg" alt="">
+                    <img src="http://file3.instiz.net/data/file3/2020/02/07/3/3/6/3369190d31fcd77e32ed6623ebd689f4.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2015/0918/IE001872912_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2015/0806/IE001857930_STD.jpg" alt="">
+                    <img src="https://ojsfile.ohmynews.com/STD_IMG_FILE/2015/1019/IE001882998_STD.jpg" alt="">
+                    <img src="http://file3.instiz.net/data/file3/2020/02/07/b/0/9/b09982971fb0daea44cd16159e6c1cc3.jpg" alt="">
+                </div>
+            </a>
+        </section>
+
+        <section class="section3">
+            <a name="review"></a>
+
+            <div id="comment-count">관람평 (<span id="count">6</span>)</div>
+            <div id="form-commentInfo">
+                <input id="comment-input" placeholder="내용을 입력해 주세요.">
+                <button id="submit" onclick="pressBtn()">등록</button>
+            </div>
+            <div id="comments">
+                <div class="eachComment">
+                    <div class="name">nhyo****</div>
+                    <span class="inputValue">결론만 말하자면 대박이다 더이상 어떤단어로 칭찬해야하는지도모르겠다.약 3시간의 긴러닝타임이지만 시간가는줄도 모르고봤고 모든상황이 다 연결되어있는 아주 짜임새있는 영화다.내가 살면서 이런명작을 몇번을 더 볼수있을지 모르겠다.</span>
+                    <div class="time">2023-3-3 15:57:54</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">jvor****</div>
+                    <span class="inputValue">우주인 인성검사의 중요성을 절실히 느낌</span>
+                    <div class="time">2023-3-3 15:57:52</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">jemj****</div>
+                    <span class="inputValue">인셉션이 인간 내면세계의 끝을 보여주었다면인터스텔라는 우주의 끝을 보여주었다.</span>
+                    <div class="time">2023-3-3 15:57:48</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">vbmf****</div>
+                    <span class="inputValue">기대를 하고 보기시작했지만 기대는 져버리고 다른 어딘가의 큰 그림으로 기대 할수없는 상상력을 보여주었고 큰 무언가를 생각하게하였다 ...</span>
+                    <div class="time">2023-3-3 15:56:48</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">emtg****</div>
+                    <span class="inputValue">극장안은 만석이지만 무척 조용했다</span>
+                    <div class="time">2023-3-3 15:54:43</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">bzdx****</div>
+                    <span class="inputValue">아직 첫 관람의 기회가 있으신 분들이 부럽습니다. 이런 작품을 언제 또 만날까 싶어요.</span>
+                    <div class="time">2023-3-3 15:52:06</div>
+                </div>
+            </div>
+        </section>
+    </div>
+            <footer id="footer">
             <div class="footer-top">
                 <div class="inner-wrap">
                     <ul class="fnb">
@@ -120,8 +202,9 @@
                         <li class="privacy"><a href="" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a></li>
                         <li><a href="" target="" title="윤리경영 페이지로 이동">윤리경영</a></li>
                     </ul>
-        
-                    <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i class="iconset ico-footer-search"></i> 극장찾기</a>
+
+                    <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i
+                            class="iconset ico-footer-search"></i> 극장찾기</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -129,7 +212,7 @@
                     <div class="ci"></div>
                     <div class="footer-info">
                         <div>
-                            <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가,  씨네박스 스퀘어)</address>
+                            <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 씨네박스 스퀘어)</address>
                             <p>ARS 1544-0000</p>
                         </div>
                         <p>대표자명 김영화</p>
@@ -141,8 +224,27 @@
                 </div>
             </div>
         </footer>
-
-    </div>
+        <script>
+            $(document).ready(function (e) {
+    
+                $(document).on("click", "img", function () {
+                    var path = $(this).attr('src')
+                    showImage(path);
+    
+                });//end click event
+    
+                function showImage(fileCallPath) {
+                    $(".bigPictureWrapper").css("display", "flex").show();
+                    $(".bigPicture").html("<img src='" + fileCallPath + "' >")
+                }//end fileCallPath
+    
+                $(".bigPictureWrapper").on("click", function (e) {
+                    setTimeout(function () {
+                        $('.bigPictureWrapper').hide();
+                    }, 200);
+                });//end bigWrapperClick event
+            });
+        </script>
 </body>
 
 </html>

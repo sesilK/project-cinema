@@ -13,7 +13,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
+        $(document).on('click', '.deleteComment', function () {
+            $('#count').text(Number($('#count').text()) - 1);
+            $(this).parents('.eachComment').remove();
+        });
 
         $(document).ready(function () {
             $(".unhidden").hide();
@@ -28,7 +33,7 @@
 </head>
 
 <body>
-    <div class="header-section">
+    <div class="header-section" style="background-image: url(image/movie_suzume.jpg); background-size: cover;">
         <header>
 
             <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
@@ -71,12 +76,11 @@
             </div>
         </header>
 
+        <div id="topBtn" onclick="window.scrollTo(0,0)"">TOP</div>
 
-
-        <section>
-            <div></div>
-                <article>
-                    <div class="text">
+        <section class="section1">
+            <article class="text_box">
+                <div class="text">
                     <p class="titleP">스즈메의 문단속</p>
                     <p class="smallP"> 예매율 1위(22.2%) </p>
                     <p class="smallP">애니메이션 | 일본 | 122분 | 2023.03.08 |</p>
@@ -85,7 +89,7 @@
                         문을 찾아 여행 중인 청년 ‘소타’를 만난다.</p>
                     <p class="smallP">
                         <button class="seeMore">더보기 ▼</button><br>
-                    <div class="unhidden">
+                    <div class="unhidden" style="width: 500px;">
                         그의 뒤를 쫓아 산속 폐허에서 발견한 낡은 문. ‘스즈메’가 무언가에 이끌리듯 문을 열자 마을에 재난의 위기가 닥쳐오고 가문 대대로 문 너머의 재난을
                         봉인하는 ‘소타’를 도와 간신히 문을 닫는다. “닫아야만 하잖아요, 여기를!” 재난을 막았다는 안도감도 잠시, 수수께끼의 고양이 ‘다이진’이 나타나 ‘소타’를 의자로 바꿔
                         버리고
@@ -93,25 +97,119 @@
                         도쿄
                         재난을 막기 위해 일본 전역을 돌며 필사적으로 문을 닫아가던 중 어릴 적 고향에 닿은 ‘스즈메’는 잊고 있던 진실과 마주하게 되는데…</div>
                     </p>
-</div>
-                </article>
+                </div>
+            </article>
 
-                <article class="video">
+            <article class="video">
 
-                    <iframe src='https://tv.naver.com/embed/28009340?autoPlay=true' frameborder='no' scrolling='no'
-                        marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay'
-                        allowfullscreen></iframe>
+                <iframe src='https://tv.naver.com/embed/28009340?autoPlay=true' frameborder='no' scrolling='no'
+                    marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
 
-                    <div class="button-box">
-                        <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
-                            <button class="button reserve">예매</button>
-                        </a>
-                        <a href="">
-                            <button class="button review">관람평</button>
-                        </a>
-                    </div>
+                <div class="button-box">
+                    <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
+                        <button class="button reserve">예매</button>
+                    </a>
+                    <a href="#review">
+                        <button class="button review">관람평</button>
+                    </a>
+                </div>
+            </article>
+        </section>
 
-                </article>
+        <a name="SteelCut"></a><br>
+        <div class="SteelCut">스틸컷 (<span></span>)</div>
+
+        <div class='bigPictureWrapper'>
+            <div class='bigPicture'>
+            </div>
+        </div>
+        <section class="section2">
+            <a href="#SteelCut">
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/04/02/jpVJy55iJTCzSxRk3NhLedZQnBo3xtVl_420.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/UuS0rd6SNDFGeVYriAaHzFqswmsQm5bg_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/05D4cZHvhraftbV24Wbr0RvYAJ1o4g0l_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/q2FAk3hI60TaQkw7e5uQMDwTuDZoTacM_380.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/22/RTxgfXZiQocAy08vFVs5InO4cLFNmYMl_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/U8wdUmx6Fk5Xm18CVE6BdmrlxZVmxmnH_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/OwXzUcF2Q2xKqihDq7dJkEZzeiTde90i_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/aKyBJlftWYxDJbQRDQTICVlyAK8w8WC5_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/Dt6YMBF0u2g9cHm1KilVw1vw2JpoLfYu_380.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/06/EbaFMRzawdjKYlCxkplTqK6FlFGZfz3m_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/1FLhoSDIEfrxLy99jjdKXPUvfH2vSK5A_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/XG94fSkgWa2hcRY5VLnZUFril8R1V1HP_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/bo1bTNNW9w7JeCC2JauvxkL8XqTefQHA_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/EtBzu951KKHgzNflq94Fkn6zEAKABK8n_380.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/4fI5u72zFpUaCY1sqP0jlElZtQALuVaG_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/rPP7Dj9MgyPbAL3vLpWr5JCPSd1uK8J7_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/2Jer6dQmO6PFz3n1XiRRqgGvfXUQGaDH_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/w4UY9kVjKnWWwUN9DbjshVKDFN5awMK2_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/16/i3qYD3CUlEoc85mW0RN7axNQWV8cMp8F_380.jpg"
+                        alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/09/p18so3J2Doafb6FQkWwb1znXAkNByeT3_380.jpg"
+                        alt="">
+                </div>
+            </a>
+        </section>
+
+        <section class="section3">
+            <a name="review"></a>
+
+            <div id="comment-count">관람평 (<span id="count">5</span>)</div>
+            <div id="form-commentInfo">
+                <input id="comment-input" placeholder="내용을 입력해 주세요.">
+                <button id="submit" onclick="pressBtn()">등록</button>
+            </div>
+            <div id="comments">
+                <div class="eachComment">
+                    <div class="name">nhyo****</div>
+                    <span class="inputValue">아름다운 풍경 일본 여행 로드무비</span>
+                    <div class="time">2023-3-3 15:57:54</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">jvor****</div>
+                    <span class="inputValue">그냥저냥 볼만한 정도입니다</span>
+                    <div class="time">2023-3-3 15:57:52</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">jemj****</div>
+                    <span class="inputValue">중반부터는 지루하고 별로 재미없음</span>
+                    <div class="time">2023-3-3 15:57:48</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">qopg****</div>
+                    <span class="inputValue">기대하고 봤는데 기대를 뛰어넘는명작 OST도 완벽했던영화</span>
+                    <div class="time">2023-3-3 15:53:54</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">auih****</div>
+                    <span class="inputValue">신카이마코토 영화 중 가장 연출력이나 영상미가 좋았어요.</span>
+                    <div class="time">2023-3-3 14:4:12</div>
+                </div>
             </div>
         </section>
     </div>
@@ -152,6 +250,27 @@
             </div>
         </div>
     </footer>
+    <script>
+        $(document).ready(function (e) {
+
+            $(document).on("click", "img", function () {
+                var path = $(this).attr('src')
+                showImage(path);
+
+            });//end click event
+
+            function showImage(fileCallPath) {
+                $(".bigPictureWrapper").css("display", "flex").show();
+                $(".bigPicture").html("<img src='" + fileCallPath + "' >")
+            }//end fileCallPath
+
+            $(".bigPictureWrapper").on("click", function (e) {
+                setTimeout(function () {
+                    $('.bigPictureWrapper').hide();
+                }, 200);
+            });//end bigWrapperClick event
+        });
+    </script>
 </body>
 
 </html>

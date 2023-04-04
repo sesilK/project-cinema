@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/movie.css">
     <link rel="shortcut icon" type="image⁄x-icon" href="https://cdn-icons-png.flaticon.com/512/5407/5407562.png">
-    <script src="js/movie.js"></script>
 
+    <script src="js/movie.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script>
+
+        $(document).on('click', '.deleteComment', function () {
+            $('#count').text(Number($('#count').text()) - 1);
+            $(this).parents('.eachComment').remove();
+        });
 
         $(document).ready(function () {
             $(".unhidden").hide();
@@ -27,7 +34,7 @@
 </head>
 
 <body>
-    <div class="header-section">
+    <div class="header-section" style="background-image: url(image/movie_dungeons.jpg); background-size: cover;">
         <header>
 
             <div class="login" style="grid-column: 1/span 3; grid-row: 1/span 1;">
@@ -69,9 +76,9 @@
                 </ul>
             </div>
         </header>
-
-        <section>
-            <article>
+        <div id="topBtn" onclick="window.scrollTo(0,0)"">TOP</div>
+        <section class="section1">
+            <article class="text_box">
                 <div class="text">
                     <p class="titleP">던전 앤 드래곤: 도적들의 명예</p>
                     <p class="smallP"> 예매율 4위(11.8%) </p>
@@ -105,52 +112,138 @@
                     <a href="http://127.0.0.1:5500/project_cinema/reserve.html">
                         <button class="button reserve">예매</button>
                     </a>
-                    <a href="">
+                    <a href="#review">
                         <button class="button review">관람평</button>
                     </a>
                 </div>
-
             </article>
         </section>
 
-        <footer id="footer">
-            <div class="footer-top">
-                <div class="inner-wrap">
-                    <ul class="fnb">
-                        <li><a href="" title="회사소개 페이지로 이동">회사소개</a></li>
-                        <li><a href="" title="인재채용 페이지로 이동">인재채용</a></li>
-                        <li><a href="" title="사회공헌 페이지로 이동">사회공헌</a></li>
-                        <li><a href="" title="제휴/광고/부대사업문의 페이지로 이동">제휴/광고/부대사업문의</a></li>
-                        <li><a href="" title="이용약관 페이지로 이동">이용약관</a></li>
-                        <li><a href="" title="위치기반서비스 이용약관 페이지로 이동">위치기반서비스 이용약관</a></li>
-                        <li class="privacy"><a href="" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a></li>
-                        <li><a href="" target="" title="윤리경영 페이지로 이동">윤리경영</a></li>
-                    </ul>
+        <a name="SteelCut"></a><br>
+        <div class="SteelCut">스틸컷 (<span></span>)</div>
 
-                    <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i
-                            class="iconset ico-footer-search"></i> 극장찾기</a>
+        <div class='bigPictureWrapper'>
+            <div class='bigPicture'>
+            </div>
+        </div>
+        <section class="section2">
+            <a href="#SteelCut">
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/04/02/ETisGvSGNqVr2uB4PT55iCtDWkevSw0J_420.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/BKin4uo08h9Nq2i9NHUVAD0BlKya9d3d_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/u4nf3JQizKgn5SuheWZI1D0PpyNqD7a4_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/ISjceBZCFAp3hJ2j6BsTTzzp5dbwuBtf_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/17/9u6hRycX4ZPwTgD9cEFnprUNnBfPIHKp_380.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/04/04/mod20gDeDKw1EjDYpGt3eF3dguLSM4OF_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/Ohyd7k26N2Fwa5nz6X2lG7zFeRs28Z8W_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/GR8s8xeJeyWbzTUYqbe7VLXASsHihgz2_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/dB5T1S1YpWjslDoqPyvj5CgoiX6YAqq5_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/17/neMWbf9TffpwjBAiciFhHLR0Z5JVote8_380.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/30/HDrBsiDdV8Al6FJIo8zFRlb48FGVs2Hy_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/JlxvuCOs4ZRcjjNaOt2IehdbFIB5rPyj_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/cboxcOVfUWSDpuvYOfFuUTMeWNfiS0Z8_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/J2mfgrmY8Q1BSq9cWIWBP2Y1zZ38D1Bu_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/17/kY7XGHk5GTNhcCsidaRSuQiJ5P5WFpc6_380.jpg" alt="">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/13/cWYmdLCrRGXj4SjxgNX8XoWUhOFlIT7U_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/Sru8fLUClOOlHFMOPnwF4Bxg9QyuIotY_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/PZyIrFezw7VZ9B45RU8Om0gzhdlx6vD9_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/06/QtzEqD8SQHhikGbHJfZhqtI8izq5AMFK_380.jpg" alt="">
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/03/17/k7wxMiUdC9XjsCn6uLWKjzCnWnKfQkG6_380.jpg" alt="">
+                </div>
+            </a>
+        </section>
+
+        <section class="section3">
+            <a name="review"></a>
+
+            <div id="comment-count">관람평 (<span id="count">3</span>)</div>
+            <div id="form-commentInfo">
+                <label>
+                    <input id="comment-input" placeholder="내용을 입력해 주세요.">
+                    <button id="submit" onclick="pressBtn()">등록</button>
+                </label>
+            </div>
+            <div id="comments">
+                <div class="eachComment">
+                    <div class="name">nhyo****</div>
+                    <span class="inputValue">판타지에 기대하는 요소들이 다 들어가 있음 재밌게 봤어요!</span>
+                    <div class="time">2023-3-3 15:57:54</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">jvor****</div>
+                    <span class="inputValue"> Ost 평점 왤케 낮음 ost만 봐도 충분히 영화관에서 두번 관람할 요지 있는데 마블식 유머도 질 녹여내서 다들 꼭 봤으면</span>
+                    <div class="time">2023-3-3 15:57:52</div>
+                </div>
+                <div class="eachComment">
+                    <div class="name">jemj****</div>
+                    <span class="inputValue"> 연기들도 다들 잘하고 액션이나 CG 영상미도 뛰어났습니다</span>
+                    <div class="time">2023-3-3 15:57:48</div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="inner-wrap">
-                    <div class="ci"></div>
-                    <div class="footer-info">
-                        <div>
-                            <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 씨네박스 스퀘어)</address>
-                            <p>ARS 1544-0000</p>
-                        </div>
-                        <p>대표자명 김영화</p>
-                        <p>· 개인정보보호책임자 김극장</p>
-                        <p>· 사업자등록번호 111-22-33333</p>
-                        <p>· 통신판매업신고번호 2023-서울성동-000</p>
-                        <p class="copy">COPYRIGHT © CINEboxJoongAng, Inc. All rights reserved</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+        </section>
     </div>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="inner-wrap">
+                <ul class="fnb">
+                    <li><a href="" title="회사소개 페이지로 이동">회사소개</a></li>
+                    <li><a href="" title="인재채용 페이지로 이동">인재채용</a></li>
+                    <li><a href="" title="사회공헌 페이지로 이동">사회공헌</a></li>
+                    <li><a href="" title="제휴/광고/부대사업문의 페이지로 이동">제휴/광고/부대사업문의</a></li>
+                    <li><a href="" title="이용약관 페이지로 이동">이용약관</a></li>
+                    <li><a href="" title="위치기반서비스 이용약관 페이지로 이동">위치기반서비스 이용약관</a></li>
+                    <li class="privacy"><a href="" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a></li>
+                    <li><a href="" target="" title="윤리경영 페이지로 이동">윤리경영</a></li>
+                </ul>
 
+                <a href="#layer_looking_theater" class="btn-looking-theater" title="극장찾기"><i
+                        class="iconset ico-footer-search"></i> 극장찾기</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="inner-wrap">
+                <div class="ci"></div>
+                <div class="footer-info">
+                    <div>
+                        <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 씨네박스 스퀘어)</address>
+                        <p>ARS 1544-0000</p>
+                    </div>
+                    <p>대표자명 김영화</p>
+                    <p>· 개인정보보호책임자 김극장</p>
+                    <p>· 사업자등록번호 111-22-33333</p>
+                    <p>· 통신판매업신고번호 2023-서울성동-000</p>
+                    <p class="copy">COPYRIGHT © CINEboxJoongAng, Inc. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function (e) {
+
+            $(document).on("click", "img", function () {
+                var path = $(this).attr('src')
+                showImage(path);
+
+            });//end click event
+
+            function showImage(fileCallPath) {
+                $(".bigPictureWrapper").css("display", "flex").show();
+                $(".bigPicture").html("<img src='" + fileCallPath + "' >")
+            }//end fileCallPath
+
+            $(".bigPictureWrapper").on("click", function (e) {
+                setTimeout(function () {
+                    $('.bigPictureWrapper').hide();
+                }, 200);
+            });//end bigWrapperClick event
+        });
+    </script>
 </body>
 
 </html>

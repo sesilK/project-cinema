@@ -2,13 +2,14 @@
     color: white;
     font-family: 'Chosunilbo_myungjo';
 }
+
 .header-section {
     background-size: cover;
     width: 100%;
     /* height: 800px; */
 }
 
-section {
+div section {
     width: 100%;
     /* height: 800px; */
     display: block;
@@ -16,6 +17,39 @@ section {
     padding: 100px 10% 100px 10%;
     /* background-color: aquamarine; */
     /* border: 1px solid white; */
+}
+.section-bottom{
+    display: flex;
+    padding: 30px 5% 80px 5%;
+    border-top: 3px ridge lightgray;
+    /* border-style: ; */
+    width: 75%;
+    margin: 0 auto;
+    justify-content: space-around;
+
+}
+.section-bottom div {
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid white; */
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: monospace;
+}
+.section-bottom div img {
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid white; */
+    /* background-color: aliceblue; */
+    cursor: pointer;
+}
+.section-bottom div span {
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 article {
@@ -65,10 +99,13 @@ article img {
     margin-top: 70px;
     text-align: center;
 }
+
 .text:hover {
     cursor: pointer;
 }
-.reserveBNT:hover, .text:hover {
+
+.reserveBNT:hover,
+.text:hover {
     box-shadow: rgb(252, 253, 255) 0px 20px 30px -10px;
 }
 
@@ -98,13 +135,54 @@ section .articleBox {
     transform: translate(-50%, -50%);
     color: white;
     /* display: none; */
-    
+
 }
 
-.text {
-    font-family: sans-serif;
-    font-size: 11px;
-    padding: 0;
-    margin-top: 70px;
-    text-align: center;
+li {
+    list-style: none;
+}
+
+.kind_wrap {
+    /* border: 2px solid black; */
+    width: 100%;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    position: relative;
+}
+
+.kind_wrap>.kind_slider {
+    overflow: hidden;
+}
+
+.kind_wrap>.kind_slider .slider {
+    position: relative;
+    transition: 0.5s;
+}
+
+.kind_wrap>.kind_slider .slider li {
+    float: left;
+}
+
+.kind_wrap>.kind_slider img {
+    vertical-align: top;
+}
+
+.kind_wrap .arrow>a.prev {
+    position: absolute;
+    left: 50px;
+    top: 45%;
+}
+
+.kind_wrap .arrow>a.next {
+    position: absolute;
+    right: 50px;
+    top: 45%;
+}
+
+.arrow * {
+    color: black;
+}
+
+.slider img {
+    width: 100%;
 }
