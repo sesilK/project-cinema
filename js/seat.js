@@ -51,7 +51,7 @@ function count(obj, type) {
             swal('먼저 선택된 좌석을 취소해주세요');
             return;
         } else {
-            if (totalCount > 0) {
+            if (totalCount > 0 && obj.nextElementSibling.innerText != 0) {
                 const resultElement = obj.nextElementSibling;
                 let number = resultElement.innerText;
                 number = parseInt(number) - 1;
@@ -66,6 +66,7 @@ function count(obj, type) {
 
             }
         }
+
         if (selected_seats[totalCount-1].innerText != '-') {
             document.querySelector(".pay").classList.add("pay-ready");
         }
