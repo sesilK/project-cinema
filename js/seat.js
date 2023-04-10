@@ -58,10 +58,15 @@ function count(obj, type) {
                 totalCount -= 1;
                 resultElement.innerText = number;
 
+                
                 for (let i = totalCount; i < 10; i++) {
                     selected_seats[i].setAttribute("style", "background-color: ; color:gray");
                 }
 
+                let adult = document.getElementsByClassName("adult")[0].childNodes[3].innerText;
+                let minor = document.getElementsByClassName("minor")[0].childNodes[3].innerText;
+                let treat = document.getElementsByClassName("treat")[0].childNodes[3].innerText;
+                document.getElementById("price").innerText = (adult * adultP + minor * minorP + treat * treatP).toLocaleString();
 
 
             }
@@ -70,10 +75,7 @@ function count(obj, type) {
         if (selected_seats[totalCount-1].innerText != '-') {
             document.querySelector(".pay").classList.add("pay-ready");
         }
-        let adult = document.getElementsByClassName("adult")[0].childNodes[3].innerText;
-        let minor = document.getElementsByClassName("minor")[0].childNodes[3].innerText;
-        let treat = document.getElementsByClassName("treat")[0].childNodes[3].innerText;
-        document.getElementById("price").innerText = (adult * adultP + minor * minorP + treat * treatP).toLocaleString();
+        
     
     }
 
